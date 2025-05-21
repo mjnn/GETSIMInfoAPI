@@ -1,0 +1,52 @@
+{
+  "sim_basic_data":{
+    "base_url":"https://cc2.10646.cn/provision/api/v1/sims",
+    "request_args": {
+              "_dc":"{timestamp_now}",
+              "page": 1,
+              "limit": 50,
+              "sort": "dateAdded",
+              "dir": "DESC",
+              "search":[
+                {
+                    "property": "oneBox",
+                    "type": "CONTAINS",
+                    "value": "{search_value}",
+                    "id": "oneBox"
+                }
+              ]
+    },
+    "headers": {
+              "Host": "cc2.10646.cn",
+              "Cookie": "{cookies}"
+    }
+  },
+  "sim_change_history":{
+    "base_url":"https://cc2.10646.cn/provision/api/v1/simChanges",
+    "request_args": {
+              "_dc":"{timestamp_now}",
+              "page": 1,
+              "limit": 200,
+              "sort": "dateModified",
+              "dir": "DESC",
+              "search":[
+                {
+                    "property": "simId",
+                    "type": "LONG_EQUALS",
+                    "value": "{search_value}",
+                    "id": "simId"
+                },
+                {
+                    "property": "category",
+                    "type": "STRING_EQUALS",
+                    "value": "history",
+                    "id": "category"
+                }
+              ]
+    },
+    "headers": {
+              "Host": "cc2.10646.cn",
+              "Cookie": "{cookies}"
+    }
+  }
+}

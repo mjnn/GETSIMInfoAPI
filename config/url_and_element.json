@@ -1,0 +1,17 @@
+{
+  "urls": {
+    "Jasper_login": "https://cc2.10646.cn/provision/jsp/login.jsp",
+    "Jasper_Homepage": "https://cc2.10646.cn/provision/ui/m2mhome/m2mhome.html"
+  },
+  "element_xpath": {
+    "Input_box": {
+      "login_username": "/html/body/form/table/tbody/tr/td/table/tbody/tr/td/table/tbody/tr/td/table/tbody/tr[5]/td[2]/input",
+      "login_password": "/html/body/form/table/tbody/tr/td/table/tbody/tr/td/table/tbody/tr/td/table/tbody/tr[7]/td[2]/input",
+      "login_captcha": "/html/body/div[3]/span/div/div/div[2]/div[1]/div/span/div/div/table/tbody/tr/td[2]/div/div/div/table/tbody/tr/td[2]/div/div/div/table/tbody/tr/td[2]/input",
+      "search_sim": "/html/body/div[3]/span/div/div/div[1]/div/div/table/tbody/tr/td[2]/table/tbody/tr/td[2]/input"
+    },
+    "button": {
+      "login_submit": "/html/body/form/table/tbody/tr/td/table/tbody/tr/td/table/tbody/tr/td/table/tbody/tr[10]/td/input[2]"
+    }
+  }
+}

@@ -1,0 +1,206 @@
+{
+    "GP": [
+        {
+            "domain": "cc2.10646.cn",
+            "httpOnly": true,
+            "name": "jsDeviceCookie--1270725091",
+            "path": "/",
+            "sameSite": "Lax",
+            "secure": true,
+            "value": "\"{wz1GEbj7yHLvPUBA4Vh4uA==}iqURYtHY+GOAUKPIvzQ/0z7iu10CdonL1ZV05pxEygJdusnYXfayXjxBR9ZUyShg\""
+        },
+        {
+            "domain": ".cc2.10646.cn",
+            "httpOnly": true,
+            "name": "jsDeviceCookie--1270725091",
+            "path": "/",
+            "sameSite": "Lax",
+            "secure": true,
+            "value": "\"{7jyNmlC5QM35dA7e/TsUCQ==}tUM7vboSThXJCnAxAeGF1j21TWTfp8z/jNlrZp0//3GCcuQaiJhPPtLbb+gZ7wCV\""
+        },
+        {
+            "domain": ".cc2.10646.cn",
+            "httpOnly": false,
+            "name": "jsAuthCookie--1270725091",
+            "path": "/",
+            "sameSite": "Lax",
+            "secure": true,
+            "value": "\"{YpBWDdhsZz1BqJqEPA1sWw==}Aughu49sBNr2LveD04223DTpt1O0RwWBbtnwYkWWqkXnD56GF1vvlTyxydCxPEmv\""
+        },
+        {
+            "domain": "cc2.10646.cn",
+            "httpOnly": false,
+            "name": "userPreferences",
+            "path": "/provision/ui/m2mhome",
+            "sameSite": "Lax",
+            "secure": false,
+            "value": "{\"lang\":\"emhfQ04=\"}"
+        },
+        {
+            "domain": ".cc2.10646.cn",
+            "httpOnly": true,
+            "name": "BIGipServer~POD26~POOL_POD26_PGW",
+            "path": "/",
+            "sameSite": "Lax",
+            "secure": true,
+            "value": "!tmK5WLE0E9odKk6zzFNuNiVq2a4Ry2Ti2gfZ7rJi8DmE8pUcB1Xl6yrvFL0yrQMcN6SYYPPC73KQqtU="
+        },
+        {
+            "domain": ".cc2.10646.cn",
+            "httpOnly": true,
+            "name": "JSESSIONID",
+            "path": "/",
+            "sameSite": "Lax",
+            "secure": true,
+            "value": "32C6B30F4CFF919E206E93B67D8569DA"
+        },
+        {
+            "domain": "cc2.10646.cn",
+            "httpOnly": true,
+            "name": "jsSessionCookie",
+            "path": "/",
+            "sameSite": "Lax",
+            "secure": true,
+            "value": "\"{4jI5wUxRrMj4qk3BZCeQNg==}y78TCoPApVNSANIBaGElez9QHtL63GPKAF4c+eNHlnXl052qbMiq8+o8XHPUIwaTeAD3Op949QsU5wRQWqHv7kk7r9gCqfneBVcPsgGHKPPzAg/D2k4cXfRZJ4vS0TQ9\""
+        },
+        {
+            "domain": "cc2.10646.cn",
+            "httpOnly": true,
+            "name": "JSESSIONID",
+            "path": "/",
+            "sameSite": "Lax",
+            "secure": true,
+            "value": "659333827A84914A551F0FA5CCE3853A"
+        },
+        {
+            "domain": ".cc2.10646.cn",
+            "httpOnly": true,
+            "name": "jsSessionCookie",
+            "path": "/",
+            "sameSite": "Lax",
+            "secure": true,
+            "value": "\"{ga14254atG3C4LCHX3uePg==}2Pn3nIcw4jydz0+b5/+1iKj3GSw5baFvm0B/qdvuH6Pm0jrf+zwBl5wDW8QHBi61ItIThvKjhaSh/Opr/ZauTlWWyNbFrUove/mudEMVCui0GNiRfVctcV03kR5yKkLT\""
+        },
+        {
+            "domain": ".cc2.10646.cn",
+            "httpOnly": false,
+            "name": "userPreferences",
+            "path": "/provision/ui/m2mhome",
+            "sameSite": "Lax",
+            "secure": true,
+            "value": "{\"lang\":\"emhfQ04=\"}"
+        }
+    ],
+    "Audi_5G": [
+        {
+            "domain": "cc2.10646.cn",
+            "httpOnly": true,
+            "name": "BIGipServer~POD26~POOL_POD26_PGW",
+            "path": "/",
+            "sameSite": "Lax",
+            "secure": true,
+            "value": "!ZtlfNZnIdkTbUmKzzFNuNiVq2a4Ry+N8Ed0MIE2LkhvxtoWRjmL9nJSMOKGl5Xr8tshDPoqMiAzwWM8="
+        },
+        {
+            "domain": "cc2.10646.cn",
+            "httpOnly": true,
+            "name": "jsSessionCookie",
+            "path": "/",
+            "sameSite": "Lax",
+            "secure": true,
+            "value": "\"{dYoS0531qnkC7fa/YEzd7Q==}7ypuQYVnNf1hshEgcE1Yf04L/rkMcAGbjHyWAH6EYFJmBak/TgPTypk/x4HRqgFlFc+0qNVenuDgbRrz0ik06f3rMjk+zZiSUfJ1hUMK6tKsfVkOPnk61oMjjPeInHMtfrDg7iil0PWxGG9OxuRSqA==\""
+        },
+        {
+            "domain": "cc2.10646.cn",
+            "httpOnly": true,
+            "name": "JSESSIONID",
+            "path": "/",
+            "sameSite": "Lax",
+            "secure": true,
+            "value": "2BB646E0BFEE85073DF36BE30FEC8E61"
+        },
+        {
+            "domain": "cc2.10646.cn",
+            "httpOnly": false,
+            "name": "jsAuthCookie--1157049362",
+            "path": "/",
+            "sameSite": "Lax",
+            "secure": false,
+            "value": "\"{JwZbwV93oqRnfglxJ7WyLw==}6xofwE7luXfgcL+n1+jrjvzopzScQJUldal2BZktCdkI3xcLwULkfZ8n4XMyPVzQbfn20Sa4/Vi4iDmHoW5w0g==\""
+        },
+        {
+            "domain": "cc2.10646.cn",
+            "httpOnly": true,
+            "name": "jsDeviceCookie--1157049362",
+            "path": "/",
+            "sameSite": "Lax",
+            "secure": true,
+            "value": "\"{oKy1wKSKbQPCGt8zuPuUgQ==}gMbcK07ejqgez6Ci6gBm0a8RBedLjVz8+vmjuIxlE5kOm9az5lrwYTaDknflAhc3\""
+        },
+        {
+            "domain": "cc2.10646.cn",
+            "httpOnly": false,
+            "name": "userPreferences",
+            "path": "/provision/ui/m2mhome",
+            "sameSite": "Lax",
+            "secure": false,
+            "value": "{\"lang\":\"emhfQ04=\"}"
+        }
+    ],
+    "CEI": [
+        {
+            "domain": "cc2.10646.cn",
+            "httpOnly": true,
+            "name": "jsDeviceCookie--1269686250",
+            "path": "/",
+            "sameSite": "Lax",
+            "secure": true,
+            "value": "\"{i/0ShFuESB9xo3/dQfXsYQ==}yOY4V27Y+JTSKSchdNaRgm/zhc6whkw7gJms7sxl4DJGgz2UOzmCkhncfLEVX21K\""
+        },
+        {
+            "domain": "cc2.10646.cn",
+            "httpOnly": false,
+            "name": "jsAuthCookie--1269686250",
+            "path": "/",
+            "sameSite": "Lax",
+            "secure": false,
+            "value": "\"{Y/VLTSHlgIGuxAXQdGO99A==}6kr78xJ2vvjpJNr6Xan0/VxAeqozecKMpU86R7Ttr75Cr8CzY8tlviLfoEIy55ES8DOHXcFUT6tmPgfhszYqsw==\""
+        },
+        {
+            "domain": "cc2.10646.cn",
+            "httpOnly": true,
+            "name": "jsSessionCookie",
+            "path": "/",
+            "sameSite": "Lax",
+            "secure": true,
+            "value": "\"{8hkYgN1R7bZERbBkrtzftw==}1wfDlZaNrhK36R0H2v6lBPSMpO4KnwAwcF7o31g5DnQ1YLQKUdynQ8ZiqOgF+DN7vzhykQowMasNviz+Rvj4mN25bqRC/uhPjgVvDyRcSasvhVWoeiXoc3vFb//5H2jR\""
+        },
+        {
+            "domain": "cc2.10646.cn",
+            "httpOnly": true,
+            "name": "JSESSIONID",
+            "path": "/",
+            "sameSite": "Lax",
+            "secure": true,
+            "value": "6D18B657425EE357E889004BE1F17034"
+        },
+        {
+            "domain": "cc2.10646.cn",
+            "httpOnly": true,
+            "name": "BIGipServer~POD26~POOL_POD26_PGW",
+            "path": "/",
+            "sameSite": "Lax",
+            "secure": true,
+            "value": "!xbnvEE5Liv1rxb2zzFNuNiVq2a4Ry2D5+LBfseDMmNpJ85Rw62S5n7kKgrsX262Afd19icPrOdHtBqo="
+        },
+        {
+            "domain": "cc2.10646.cn",
+            "httpOnly": false,
+            "name": "userPreferences",
+            "path": "/provision/ui/m2mhome",
+            "sameSite": "Lax",
+            "secure": false,
+            "value": "{\"lang\":\"emhfQ04=\"}"
+        }
+    ]
+}
