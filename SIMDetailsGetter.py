@@ -6,6 +6,9 @@ from selenium.common import TimeoutException
 import json
 from selenium.webdriver.edge.service import Service as EdgeService
 from webdriver_manager.microsoft import EdgeChromiumDriverManager
+from selenium.webdriver.chrome.options import Options
+from selenium.webdriver.chrome.service import Service
+from webdriver_manager.chrome import ChromeDriverManager
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
@@ -15,12 +18,15 @@ import logging
 
 
 # 配置日志格式、级别和输出方式
+handlers = [
+    logging.StreamHandler(),  # 输出到终端
+    logging.FileHandler("app.log", encoding="utf-8",mode='w')  # 输出到文件（可选）
+]
+
 logging.basicConfig(
     level=logging.DEBUG,
     format='%(asctime)s - %(levelname)s - %(message)s',
-    filename='app.log',  # 日志写入文件
-    filemode='w',         # 'w' 覆盖模式，'a' 追加模式
-    encoding='utf-8'
+    handlers=handlers,  # 输出到终端  # 日志写入文件
 )
 
 def log_method(func):
@@ -139,7 +145,6 @@ class SIMInfoGetter:
         :return: 返回获取到的cookies_dict
         """
         # 初始化webdriver
-        # 自动检测浏览器版本并下载对应驱动
         # 加载配置文件中的用户名和密码
         logging.debug('开始加载配置文件内容：')
         with open('.\\config\\mno_account.json', 'r') as f:
@@ -151,12 +156,24 @@ class SIMInfoGetter:
         with open('.\\config\\url_and_element.json', 'r') as f:
             url_and_element_dict = json.load(f)
             url_login = url_and_element_dict['urls']['Jasper_login']
-            url_Home = url_and_element_dict['urls']['Jasper_Homepage']
+            url_home = url_and_element_dict['urls']['Jasper_Homepage']
             element_xpath_dict = url_and_element_dict['element_xpath']
             logging.debug('url和页面元素配置加载完成')
-        driver = webdriver.Edge(service=EdgeService(EdgeChromiumDriverManager().install()))
-        driver.get(url_Home)
-        logging.info('访问： %s', url_Home)
+        options = Options()
+        # options.add_argument("--headless")  # 无头模式
+        options.add_argument("--no-sandbox")  # 禁用沙盒（Docker 需要）
+        options.add_argument("--disable-dev-shm-usage")  # 避免内存问题
+
+        # 初始化 WebDriver
+        driver = webdriver.Chrome(
+            # 自动检测浏览器版本并下载对应驱动
+            service=Service(ChromeDriverManager().install()),
+            options=options
+        )
+
+        driver.get(url_login)  # 正常访问网页
+        logging.info('访问： %s', url_login)
+
         try:
             with open('config/cookies_for_webdriver.json', 'r') as f:
                 logging.info('读取cookies_for_webdriver')
@@ -170,7 +187,7 @@ class SIMInfoGetter:
                 driver.delete_all_cookies()
                 for cookie in cookies_for_webdriver[self.__project__]:
                     driver.add_cookie(cookie)
-                driver.refresh()
+                driver.get(url_login)
                 logging.info('刷新driver完成')
                 logging.debug(f'当前页面名：{driver.title}')
                 if 'Welcome to the Control Center!' in driver.title:
@@ -219,15 +236,16 @@ class SIMInfoGetter:
         while True:
             try:
                 # 通过检查SIM卡搜索框有没有出现来判断检查是否登录成功
-                WebDriverWait(driver, 10).until(
-                        EC.presence_of_element_located((By.XPATH, element_xpath_dict['Input_box']['search_sim']))
-                    )
+                WebDriverWait(driver, 30).until(
+                    EC.title_contains('欢迎')
+                    # EC.presence_of_element_located((By.XPATH, element_xpath_dict['Input_box']['search_sim']))
+                )
                 logging.info('登录成功')
                 cookies_list = driver.get_cookies()
                 # 删除所有的有效期字段
-                for cookie in cookies_list:
-                    if 'expiry' in cookie.keys():
-                        del cookie['expiry']
+                # for cookie in cookies_list:
+                #     if 'expiry' in cookie.keys():
+                #         del cookie['expiry']
                 logging.info('写入新的cookies到cookies_for_webdriver.json')
                 with open('.\\config\\cookies_for_webdriver.json', 'r') as f:
                     # 有内容则加载到cookies_dict中
@@ -250,9 +268,11 @@ class SIMInfoGetter:
                 if driver.title == '身份验证':
                     logging.info('请输入邮箱验证码！')
                     continue
+                elif 'Welcome' in driver.title:
+                    continue
                 else:
+                    print(driver.title)
                     cookies_list = []
-                    driver.close()
                     logging.error('读取页面数据的时候遇到未知错误')
                     return cookies_list
 
@@ -361,7 +381,7 @@ class SIMInfoGetter:
     @log_method
     def update_cookies(self):
         '''
-        需要传入all_cookies_json，该方法会更新cookies_for_request.json，并赋值当前项目cookies的全局变量__project_cookies_dict__
+        该方法会更新cookies_for_request.json，并赋值当前项目cookies的全局变量__project_cookies_dict__
         :return:bool值
         '''
         all_cookies_json = self.read_all_cookies()

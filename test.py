@@ -13,5 +13,3 @@ elif sim_data["success"] ==  False:
         print(json.dumps(sim_data,indent=4,ensure_ascii=False))
     else:
         print(json.dumps(sim_data,indent=4,ensure_ascii=False))
-
-

@@ -2,10 +2,10 @@ from flask import Flask,jsonify
 from SIMDetailsGetter import *
 from flask import request
 from datetime import datetime
+import os
 
 app = Flask(__name__)
-app.config['DEBUG'] = True
-
+app.config['SECRET_KEY'] = os.environ.get('SECRET_KEY', 'dev-fallback-key')
 
 def timestamp_processor(input_value, timestamp_level):
     """
@@ -92,7 +92,7 @@ def sim_data_getter():
             }
             return jsonify(response), 200
 
-if __name__ == '__main__':
-    app.run(host='0.0.0.0', port=5000, debug=True)
+# if __name__ == '__main__':
+#     app.run(host='0.0.0.0', port=5000, debug=True)
 
 
